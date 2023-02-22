@@ -15,6 +15,7 @@
 		116AD2C029A4D2BF0070CA79 /* ImageMarkdownUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AD2BF29A4D2BF0070CA79 /* ImageMarkdownUITests.swift */; };
 		116AD2C229A4D2BF0070CA79 /* ImageMarkdownUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AD2C129A4D2BF0070CA79 /* ImageMarkdownUITestsLaunchTests.swift */; };
 		116AD2D029A4D33B0070CA79 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 116AD2CF29A4D33B0070CA79 /* PythonKit */; };
+		11A6A68429A63F3300F22858 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A6A68329A63F3300F22858 /* Tag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		116AD2BB29A4D2BF0070CA79 /* ImageMarkdownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageMarkdownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		116AD2BF29A4D2BF0070CA79 /* ImageMarkdownUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMarkdownUITests.swift; sourceTree = "<group>"; };
 		116AD2C129A4D2BF0070CA79 /* ImageMarkdownUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMarkdownUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		11A6A68329A63F3300F22858 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				116AD2A729A4D2BE0070CA79 /* Assets.xcassets */,
 				116AD2AC29A4D2BE0070CA79 /* ImageMarkdown.entitlements */,
 				116AD2A929A4D2BE0070CA79 /* Preview Content */,
+				11A6A68329A63F3300F22858 /* Tag.swift */,
 			);
 			path = ImageMarkdown;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A6A68429A63F3300F22858 /* Tag.swift in Sources */,
 				116AD2A629A4D2BE0070CA79 /* ContentView.swift in Sources */,
 				116AD2A429A4D2BE0070CA79 /* ImageMarkdownApp.swift in Sources */,
 			);

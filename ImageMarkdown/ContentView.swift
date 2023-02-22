@@ -45,9 +45,10 @@ struct ContentView: View {
                     }
                     TextField("Image type", text: $imageType)
                         .onSubmit {
-                            print("lol")
-                            types.append(imageType)
-                            imageType = ""
+                            if !imageType.isEmpty{
+                                types.append(imageType)
+                                imageType = ""
+                            }
                         }
                        
                 }
@@ -60,8 +61,10 @@ struct ContentView: View {
                     }
                     TextField("Image object", text: $imageObject)
                         .onSubmit {
-                            objects.append(imageObject)
-                            imageObject = ""
+                            if !imageObject.isEmpty{
+                                objects.append(imageObject)
+                                imageObject = ""
+                            }
                         }
                         
                 }
@@ -74,19 +77,27 @@ struct ContentView: View {
                     }
                     TextField("Image detail", text: $imageDetail)
                         .onSubmit {
-                            details.append(imageDetail)
-                            imageDetail = ""
+                            if !imageDetail.isEmpty{
+                                details.append(imageDetail)
+                                imageDetail = ""
+                            }
                         }
                         
                 }
                 Spacer()
-                Button(action: self.runPythonCode,
+                Button(action:{
+                    self.runPythonCode()
+                    types=[]
+                    objects=[]
+                    details=[]
+                    imageName=""
+                },
                        label: {
                     Text("PressMe")
                 })
                 .buttonStyle(.borderedProminent)
                 .tint(Color.blue)
-                Text("\(result)")
+                //Text("\(result)")
             }
             .frame(maxWidth:300)
             
@@ -101,8 +112,12 @@ struct ContentView: View {
       let sys = Python.import("sys")
       sys.path.append(dirPath)
       let example = Python.import("sample")
-      let response = example.hello(imageName, imageType, imageObject, imageDetail)
-        result=response.description
+        if imageName.isEmpty && types.isEmpty && objects.isEmpty && details.isEmpty{
+            
+        }else{
+            _ = example.addImageColumns(imageName, types, objects, details)
+        }
+    
     }
     
 }
